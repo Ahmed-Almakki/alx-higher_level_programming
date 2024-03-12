@@ -9,6 +9,6 @@ if x < 6 and x != 0 or number < 0:
         print("Last digit of {} is {} and is less than 6 and not 0".format(number, x))
     if number < 0:
         n = abs(number) % 10
-        print("Last digit of of {} is -{} and is less than 6 and not 0".format(number, n))
+        print("Last digit of {} is -{} and is less than 6 and not 0".format(number, n))
 if x == 0:
     print("Last digit of {} is {} and is 0".format(number, x))
