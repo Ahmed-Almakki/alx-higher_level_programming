@@ -9,4 +9,7 @@ def fizzbuzz():
             print("FizzBuzz", end="")
         else:
             print(i, end="")
-
+        if i != 100:
+            print(end=" ")
+        if i == 100:
+            pass
