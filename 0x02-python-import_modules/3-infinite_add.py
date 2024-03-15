@@ -6,6 +6,6 @@ if __name__ == '__main__':
     if ln == 0:
         print("0")
     else:
-        for i in range (1, ln + 1):
+        for i in range(1, ln + 1):
             res = int(argv[i]) + res
         print(res)
