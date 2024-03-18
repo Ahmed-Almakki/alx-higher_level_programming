@@ -2,5 +2,11 @@
 def delete_at(my_list=[], idx=0):
     if idx < 0 or idx > len(my_list) - 1:
         return my_list
-    my_list.pop(idx)
+    j = 0
+    for i in range(len(my_list)):
+        if i == idx:
+            pass
+        else:
+            my_list[j] = my_list[i]
+            j += 1
     return my_list
