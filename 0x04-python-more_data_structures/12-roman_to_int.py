@@ -5,7 +5,7 @@ def roman_to_int(roman_string):
     if type(roman_string) != str or roman_string is None:
         return 0
     for i in roman_string:
-        if i not in rim.keys():
+        if i not in rom.keys():
             return 0
     if len(roman_string) == 2:
         if rom[roman_string[1]] > rom[roman_string[0]]:
