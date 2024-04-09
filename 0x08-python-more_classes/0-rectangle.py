@@ -2,4 +2,5 @@
 """class object"""
 
 class Rectangle:
+    """class object"""
     pass
