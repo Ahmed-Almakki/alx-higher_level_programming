@@ -12,4 +12,3 @@ class MyList(list):
         method sort a list
         """
         print(sorted(self))
-

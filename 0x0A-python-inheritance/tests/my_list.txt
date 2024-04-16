@@ -1,0 +1,42 @@
+========================
+my_list test cases
+========================
+
+test some  cases of my_list class
+------------------------
+
+importing my_list
+    >>> MyList = __import__('1-my_list').MyList
+
+common casses:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+not define cases:
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list.append('a')
+    Traceback (most recent call last)
+    ...
+    NameError: name not defined
+
+repeated number case:
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(3)
+    >>> my_list.append(3)
+    [3, 3, 3]
+
+empty list case:
+    >>> a = []
+    >>> my_list = My_list(a)
+    >>> my_list.print_sorted(a)
