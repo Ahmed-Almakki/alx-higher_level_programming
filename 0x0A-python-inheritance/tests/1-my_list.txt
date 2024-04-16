@@ -37,6 +37,7 @@ repeated number case:
     [3, 3, 3]
 
 empty list case:
-    >>> a = []
-    >>> my_list = My_list(a)
-    >>> my_list.print_sorted(a)
+    >>> my_list = Mylist()
+    >>> my_list.append()
+    >>> my_list.print_sorted()
+    []
