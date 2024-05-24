@@ -5,8 +5,8 @@ LEFT JOIN
 	tv_show_genres tvg ON tvg.show_id = sh.id
 LEFT JOIN
 	tv_genres gn ON gn.id = tvg.genre_id
-WHERE name IS NULL
-	OR name <> (SELECT DISTINCT name
+WHERE title NOT IN
+	(SELECT title
 		FROM tv_shows sh
 		INNER JOIN
 			tv_show_genres tvg ON tvg.show_id = sh.id
