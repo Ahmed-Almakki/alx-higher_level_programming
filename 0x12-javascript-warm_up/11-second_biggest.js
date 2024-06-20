@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function compare(a, b) {
+function compare (a, b) {
   return a - b;
 }
 
