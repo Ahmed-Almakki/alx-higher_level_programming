@@ -11,7 +11,7 @@ if __name__ == "__main__":
                        password=argv[2],
                        database=argv[3])
     c = db.cursor()
-    qury = "SELECT cities.id, states.name, cities.name \
+    qury = "SELECT cities.id, cities.name, states.name \
             FROM cities INNER JOIN states \
             ON cities.state_id = states.id \
             ORDER BY cities.id ASC"
