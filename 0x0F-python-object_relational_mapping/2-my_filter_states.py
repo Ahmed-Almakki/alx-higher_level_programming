@@ -11,9 +11,10 @@ if __name__ == "__main__":
                        password=argv[2],
                        database=argv[3])
     cur = db.cursor()
+    cur.execute("SHOW DATABASES")
+    rows = cur.fetchall()
     query ="SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(argv[4])
     cur.execute(query)
-    rows = cur.fetchone()
-    while rows is not None:
-        print(rows)
-        rows = cur.fetchone()
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
