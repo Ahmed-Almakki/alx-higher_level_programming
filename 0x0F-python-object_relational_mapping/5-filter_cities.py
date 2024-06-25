@@ -18,7 +18,7 @@ if __name__ == "__main__":
             ORDER BY cities.id ASC"
     r = c.execute(qury, (argv[4],))
     rows = c.fetchall()
-    i = 1 
+    i = 1
     if (len(argv) == 5 and r != 0):
         for row in rows:
             print(row[0], end="")
