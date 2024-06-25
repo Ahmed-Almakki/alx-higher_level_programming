@@ -7,15 +7,16 @@ import sys
 
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(sys.argv[1],
-        sys.argv[2],
-        sys.argv[3]), 
-        pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+                           sys.argv[1],
+                           sys.argv[2],
+                           sys.argv[3]),
+                           pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State.id, State.name).filter(State.id).first()
     if result:
-        print("{1}: {0}".format(results.name, results.id))
+        print("{1}: {0}".format(result.name, result.id))
     else:
         print("Nothing")
     session.close()
