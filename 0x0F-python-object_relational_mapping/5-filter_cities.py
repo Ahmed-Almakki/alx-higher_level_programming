@@ -16,10 +16,10 @@ if __name__ == "__main__":
             ON states.id = cities.state_id \
             WHERE states.name = %s \
             ORDER BY cities.id ASC"
-    c.execute(qury, (argv[4],))
+    r = c.execute(qury, (argv[4],))
     rows = c.fetchall()
-    i = 1
-    if (len(argv) == 4):
+    i = 1 
+    if (len(argv) == 5 and r != 0):
         for row in rows:
             print(row[0], end="")
             if i != len(rows):
