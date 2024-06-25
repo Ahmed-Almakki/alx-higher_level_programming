@@ -19,10 +19,13 @@ if __name__ == "__main__":
     c.execute(qury, (argv[4],))
     rows = c.fetchall()
     i = 1
-    for row in rows:
-        print(row[0], end="")
-        if i != len(rows):
-            print(",", end=" ")
-        else:
-            print()
-        i += 1
+    if (len(argv) == 4):
+        for row in rows:
+            print(row[0], end="")
+            if i != len(rows):
+                print(",", end=" ")
+            else:
+                print()
+            i += 1
+    else:
+        print()

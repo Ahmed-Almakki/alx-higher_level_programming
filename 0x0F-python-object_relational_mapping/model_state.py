@@ -9,6 +9,7 @@ import sys
 
 Base = declarative_base()
 
+
 class State(Base):
     """ state class thats gona be a database
     __tablename__(str): the name of sql table
