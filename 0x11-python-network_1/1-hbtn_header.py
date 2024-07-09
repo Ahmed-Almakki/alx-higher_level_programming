@@ -4,8 +4,9 @@ import sys
 from urllib.request import urlopen
 
 
-with urlopen(sys.argv[1]) as response:
-    res = response.info()
-    x = res.get("X-Request-Id")
+if __name__ == "__main__":
+    with urlopen(sys.argv[1]) as response:
+        res = response.info()
+        x = res.get("X-Request-Id")
 
-print(x)
+    print(x)
