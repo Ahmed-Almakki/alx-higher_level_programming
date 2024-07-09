@@ -14,4 +14,4 @@ if content.split("=")[1] == 'utf-8':
 print("Body response:\n\
     - type: {}\n\
     - content: {}\n\
-    - utf8 content: {}".format(type(res), res, ok))
+    - utf8 content: {}".format(type(res), res, res.decode(encoding='utf-8')))
