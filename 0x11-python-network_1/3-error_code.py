@@ -7,8 +7,9 @@ import urllib.request as req
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    reqq = req.Request(url)
     try:
-        with req.urlopen(url) as resp:
+        with req.urlopen(reqq) as resp:
             print("Index")
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
