@@ -7,7 +7,7 @@ import requests
 if __name__ == "__main__":
     x = requests.get(sys.argv[1])
     status = x.status_code
-    if status < 400:
-        print("Index")
+    if status >= 400:
+       print("Error code: {}".format(status))
     else:
-        print("Error code: {}".format(status))
+        print(x.text)
